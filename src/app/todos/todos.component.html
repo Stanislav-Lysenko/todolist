@@ -1,0 +1,12 @@
+<div *ngIf="!loading" class="todos">
+<ul class="todos__container" *ngIf="getLength(); else noTodos">
+  <li class="todos__todo" *ngFor="let todo of getTodos() | filter:getSearchString():getCompletedFlag(); let i = index">
+    <app-todo [todo]="todo" [i]="i"></app-todo>
+  </li>
+</ul>
+</div>
+<ng-template #noTodos>
+  <p style="text-align: center;">No todos now!</p>
+</ng-template>
+<div *ngIf="loading" class="todos">Loading...</div>
+<!--  | filter:getSearchString():getCompletedFlag() -->

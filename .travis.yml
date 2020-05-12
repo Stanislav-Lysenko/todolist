@@ -1,0 +1,17 @@
+language: node_js
+node_js:
+- '10'
+
+before_install:
+-npm install -g @angular/cli
+install: npm install
+
+branches:
+  only:
+  - master
+
+deploy:
+  provider: heroku
+  app: todolist-by-stas
+  api_key:
+    secure: "OiSwNEFes856Pr0o2QNVQA46ZcEKo9xmd0j0hwVaaW5MQlAqrPziORfNt3gFUmxFNVPGPqpdGY3dLYa1VupzdGR4eTbB4dymssY2Zmw8cu9VnUsFoTh6DFV04GW0P2s9braRZI6pAF107fCsJYtdbCc+bDezWEgV/Vlz0YjlePEQWNKQo1K7w//JEY2iefLxcuSaCJuPVvvC5UBjpjZScBpPbrNEEFMdWfUpf7Dj5wPCWIWbrbJpZYvqrjmxOtkttbD3u73EztTLX6sWgNBZyjGTZNuk8mYlQQiLqCPihoQrBJ8S+1jpJ+bSY4D0JdcW2+PRQaE3juJG05mTLSuOUQB4HDEr8c8EhjDXVowp8Wol14w3DrFBMLbDMhKT2jxUnE69kFxtOfvFm/h6Y6ogsjRVTZVm2yM4AP/51b0AfxxZB4aZzMCQWm8+OrKlyTHapFmXWBBWAHGrabiE/P+NGPprCPVpc1BM1mSlqBu2gOByCi5JkYQXa8xs/2rA/6ZneNxeemWq06UGfrJG0L62qCyV2TAvYe3i32S8XdbqdbUXzefPjOuKOeiNK+Tk2Bhbw69qCKX9oOIStaZC9LPpGFllQER7B+2Rj9r86Uavj4F8i3bhv0u9vRq9Pv5VtYs9+9RiP9Oijhi0dEUpRMGhD9wBAW+YCR7UQlgMkGL0UWg="

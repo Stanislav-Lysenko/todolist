@@ -1,0 +1,15 @@
+<div class="todo">
+  <div [class.todo_done]="todo.completed">
+    <label class="todo__checkbox-label">
+      <input class="todo__checkbox-input" type="checkbox" [checked]="todo.completed" (change)="onChange(todo.id)">
+      <div class="todo__checkbox-text"></div>
+    </label>
+    <strong class="todo__serial-number">{{ i + 1 }}</strong>
+    <span class="todo__title" >{{ todo.title }}</span>
+  </div>
+  <div class="todo__block">
+    <small class="todo__date">{{ todo.date| date}}</small>
+    <button class="todo__delete-btn" (click)="deleteTodo(todo.id)">&times;</button>
+  </div>
+</div>
+
